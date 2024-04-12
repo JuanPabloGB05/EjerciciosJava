@@ -32,7 +32,9 @@ public class MyApp {
     }
 
     public static void main(String[] args) {
+    	Thread.currentThread().setName("pepe");
         SwingUtilities.invokeLater(MyApp::run);
-       
+        while(true);
+        
     }
 }
