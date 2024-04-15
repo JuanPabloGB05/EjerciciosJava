@@ -13,7 +13,7 @@ public class Main extends JFrame {
 		super("Ejemplo Java 2D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Lienzo lienzo = new Lienzo();
-		lienzo.setPreferredSize(new Dimension(700, 700));
+		lienzo.setPreferredSize(new Dimension(900, 900));
 		setContentPane(lienzo);
 		pack();
 		setLocationRelativeTo(null);
