@@ -12,18 +12,42 @@ import java.io.InputStreamReader;
 
 public class Ejercicio3 {
 
+//	public static void main(String[] args) throws IOException {
+//		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+//		String linea;
+//		System.out.println("Linea: ");
+//		linea = in.readLine().toLowerCase();
+//		while (!linea.equalsIgnoreCase("fin")) {
+//			int i = 0, iPrimero, iUltimo;
+//			char c;
+//			boolean seRepite;
+//			do {
+//				c = linea.charAt(i);
+//				iPrimero = linea.indexOf(c);
+//				iUltimo = linea.lastIndexOf(c);
+//				seRepite = iPrimero < i || iUltimo > i;
+//				i++;
+//			} while(seRepite);
+//			System.out.println(c);
+//			System.out.println("Linea: ");
+//			linea = in.readLine();
+//		}
+//	}
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		String linea;
 		System.out.println("Linea: ");
 		linea = in.readLine().toLowerCase();
 		while (!linea.equalsIgnoreCase("fin")) {
-			int i = 0, iUltimo;
+			int i = -1, iPrimero, iUltimo;
 			char c;
 			do {
+				i++;
 				c = linea.charAt(i);
+				iPrimero = linea.indexOf(c);
 				iUltimo = linea.lastIndexOf(c);
-			} while(i++ < iUltimo);
+			} while(iPrimero < i || iUltimo > i);
 			System.out.println(c);
 			System.out.println("Linea: ");
 			linea = in.readLine();
