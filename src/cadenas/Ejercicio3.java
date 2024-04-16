@@ -18,12 +18,12 @@ public class Ejercicio3 {
 		System.out.println("Linea: ");
 		linea = in.readLine().toLowerCase();
 		while (!linea.equalsIgnoreCase("fin")) {
-			int i = 0, iMax;
+			int i = 0, last;
 			char c;
 			do {
 				c = linea.charAt(i);
-				iMax = linea.lastIndexOf(c);
-			} while(i++ < iMax);
+				last = linea.lastIndexOf(c);
+			} while(i++ < last);
 			System.out.println(c);
 			System.out.println("Linea: ");
 			linea = in.readLine();
