@@ -37,7 +37,8 @@ public class Ejercicio4 {
 //		 vector[i] = (int) (Math.random() * 100000)% 201-100;
 //		}
 		
-		int[] vector = {1, 2, 13, 1, 1, 1, 1, 1, 1, 1, -13};
+//		int[] vector = {1, 2, 13, 1, 1, 1, 1, 1, 1, 1, -13};
+		int[] vector = {1, 2, 13, 1, 1, 1, 1, 1, 1, 1, -13, 0, 0, 0, 0, 0, 5};
 	
 		int suma =0;
 		int noSumados=0;
@@ -55,6 +56,7 @@ public class Ejercicio4 {
 				} else {
 					noSumados += contador;
 				}
+				i--;
 			 }else {
 				 suma += vector[i];
 			 }
