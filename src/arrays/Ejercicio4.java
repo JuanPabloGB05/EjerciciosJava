@@ -37,20 +37,20 @@ public class Ejercicio4 {
 //		 vector[i] = (int) (Math.random() * 100000)% 201-100;
 //		}
 		
-		int[] vector = {1, 2, 13, 1, 1, 1, 2, 1, 1, 1, -13};
+		int[] vector = {1, 2, 13, 1, 1, 1, 1, 1, 1, 1, -13};
 	
 		int suma =0;
 		int noSumados=0;
 		
 		for(int i=0; i<vector.length;i++) {
 			 if (vector[i]==13) {
-				int parcial =13;
-				int contador=1;
-				for(int k=i+1;k< i+14 && k<vector.length;k++) {
-					parcial += vector[k];
+				int parcial = 13;
+				int contador = 0;
+				while (++i < vector.length && contador < 13) {
+					parcial += vector[i];
 					contador++;
 				}
-				if(parcial ==7) {
+				if(parcial == 7) {
 					suma += 7;
 				} else {
 					noSumados += contador;
