@@ -55,7 +55,6 @@ public class Ejercicio4 {
 				} else {
 					noSumados += contador;
 				}
-				i += 14;
 			 }else {
 				 suma += vector[i];
 			 }
