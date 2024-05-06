@@ -13,6 +13,8 @@ public class Ejercicio5 {
 	intercambio(sandwich);
 	System.out.println(Arrays.toString(sandwich));
 	System.out.println("rango del vector: " + rango(vector));
+	int [] v = {5, 9, 11, 2, 7, 17, -9, 0, 13, 209, 75, 99, 21};
+	System.out.println(subsecuenciaMasLarga(v));
 	}
 
 	/*
@@ -112,6 +114,52 @@ public class Ejercicio5 {
 			}
 		}
 		return max - min + 1;
+	}
+	
+	/*
+	 * Método que acepte un vector de números enteros y retorne la desviación
+	 * estándar de los valores almacenados en un array de números enteros.
+	 * Este valor se computa a partir de la correspondiente expresión matemática.
+	 */
+	
+	public static double desviacionEstandar(int [] v) {
+		double media = 0;
+		for (int i=0; i < v.length; i++) {
+			media += v[i];
+		}
+		media /= v.length;
+		double aux = 0;
+		for (int i=0; i < v.length; i++) {
+			aux += v[i] - media;
+		}
+		return Math.sqrt(aux / v.length - 1);
+	}
+	
+	/*
+	 * Método que reciba un vector de números enteros y retorne
+	 * la longitud de la subsecuencia más larga de valores ordenados
+	 * de menor a mayor.
+	 * 
+	 *    Ejemplo: {5, 9, 11, 2, 7, 17, -9, 0, 13, 209, 75, 99, 21} → 4
+	 *                                  --------------
+	 */
+	
+	public static int subsecuenciaMasLarga(int [] v) {
+		int maximo = Integer.MIN_VALUE;
+		int contador = 1;
+		for (int i = 1; i < v.length; i++) {
+			if (v[i] >= v[i-1]) {
+				contador++;
+			} else {
+				if (contador > maximo) {
+					maximo = contador;
+				}
+				contador=1;
+			}
+		}
+		return maximo;
+		
+		
 	}
 	
 }
