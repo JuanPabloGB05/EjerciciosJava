@@ -53,5 +53,29 @@ public class Automovil {
 			return combustibleNecesario;
 		}
 	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public float getCapacidadDeposito() {
+		return capacidadDeposito;
+	}
+
+	public float getCombustible() {
+		return combustible;
+	}
+
+	public float getConsumo() {
+		return consumo;
+	}
+
+	public float getTotalKm() {
+		return totalKm;
+	}
+
+	public float getTotalCombustible() {
+		return totalCombustible;
+	}
 	
 }
