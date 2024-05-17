@@ -24,7 +24,7 @@ public class Ejercicio2 {
 //	}
 	
 	public static void main(String[] args) {
-		File f = new File("c:\\Users\\Julio\\Documents\\Quijote.txt");
+		File f = new File("El Quijote UTF8.txt");
 		long t0 = System.nanoTime();
 		FileInputStream in1 = null;
 		try {
